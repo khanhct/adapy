@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  cardano-node:
+    image: shioihi/cardano-container-mainnet:latest
+    volumes:
+      - state-wallet-mainnet:/wallet:rw
+    ports:
+      - '0.0.0.0:8000:8000'
+      - '0.0.0.0:8090:8090'
+
+volumes:
+  state-wallet-mainnet:
